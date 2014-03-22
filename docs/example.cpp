@@ -9,52 +9,52 @@ void teste();
 
 int main(int argc, char **argv)
 {
-	PerlInterface interface("example1Perl1.pl");//Iniciando o arquivo perl
+	PerlInterface interface("example1Perl1.pl");//Starting the Perl in Interpreter in this Perl File
 
-	cout << "Funcao 1 (sem parametros e sem valor de retorno)" << endl;
+	cout << "Function 1 (no parameters and no return)" << endl;
 	interface.sub("showtime");
 
-	cout << endl << "Funcao 2 (com parametros e com 1 retorno)" << endl;
+	cout << endl << "Function 2 (with parameters and one return)" << endl;
 	interface  << 2 << 3;
-	int resultado = interface.sub("soma").get();
-	cout << "Resultado: " << resultado << endl << endl;
+	int result = interface.sub("sum").get();
+	cout << "Result: " << result << endl << endl;
 
-	cout << "Funcao 3 (Retornando multiplos parametros)" << endl;
+	cout << "Function 3 (Returning multiple values)" << endl;
 	interface << 5 << 6 << 9;
 	PerlStack ret = interface.sub("squareAll");
-	int resultados[] = {ret.get(), ret.get(), ret.get()};
-	cout << "Resultados: " << resultados[0] << ", " << resultados[1] << ", " << resultados[2] << endl << endl;
+	int results[] = {ret.get(), ret.get(), ret.get()};
+	cout << "Results: " << results[0] << ", " << results[1] << ", " << results[2] << endl << endl;
 
-	cout << "Funcao 4 (Passando saida de uma funcao como argumento de outra)" << endl;
+	cout << "Function 4 (Passing the return of a function to an other)" << endl;
 	interface << 2 << 4 << 9;
 	PerlStack stackToAdd = interface.newStack();
-	stackToAdd << 1 << 2 << "lalala" << 3.14159;
+	stackToAdd << 1 << 2 << "C+Perl is awesome!" << 3.14159;
 	interface.sub("distArg", stackToAdd << interface.sub("squareAll"));
 
 
 
-	cout << endl << endl << "Agora usando um outro arquivo" << endl;
+	cout << endl << endl << "Now using an other file" << endl;
 
-	PerlInterface interface2("example1Perl2.pl");
+	PerlInterface interface2("example1Perl2.pl");//Look that we need a different PerlInterface when using a different file
 
-	cout << "Funcao 1 (sem parametros e sem valor de retorno)" << endl;
+	cout << "Function 1 (no parameters and no return)" << endl;
 	interface2.sub("showtime");
 
-	cout << endl << "Funcao 2 (com parametros e com 1 retorno)" << endl;
+	cout << endl << "Function 2 (with parameters and one return)" << endl;
 	interface2  << 2 << 3;
-	resultado = interface2.sub("soma").get();
-	cout << "Resultado: " << resultado << endl << endl;
+	result = interface2.sub("sum").get();
+	cout << "Result: " << result << endl << endl;
 
-	cout << "Funcao 3 (Retornando multiplos parametros)" << endl;
+	cout << "Function 3 (Returning multiple values)" << endl;
 	interface2 << 5 << 6 << 9;
 	PerlStack ret2 = interface2.sub("squareAll");
-	int resultados2[] = {ret2.get(), ret2.get(), ret2.get()};
-	cout << "Resultados: " << resultados2[0] << ", " << resultados2[1] << ", " << resultados2[2] << endl << endl;
+	int results2[] = {ret2.get(), ret2.get(), ret2.get()};
+	cout << "Results: " << results2[0] << ", " << results2[1] << ", " << results2[2] << endl << endl;
 
-	cout << "Funcao 4 (Passando saida de uma funcao como argumento de outra)" << endl;
+	cout << "Function 4 (Passing the return of a function to an other)" << endl;
 	interface2 << 2 << 4 << 9;
 	interface2.sub("distArg", interface2.sub("squareAll"));
 
-	cout << "Fim" << endl;
+	cout << "The end" << endl;
 	return 0;
 }

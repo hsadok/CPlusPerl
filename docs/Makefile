@@ -33,7 +33,7 @@ HEADER=CPlusPerl.h
 
 EXP=example.cpp
 EXP_OBJS=$(subst .cpp,.o,$(EXP))
-EXP_EXEC= example1
+EXP_EXEC= example
 
 
 .cpp.o:
@@ -41,7 +41,8 @@ EXP_EXEC= example1
 
 all: $(LIB) $(HEADER) $(EXP_EXEC)
 	@echo "=================================================================================================="
-	@echo "=== Go to the docs directory to execute the example1, the source code is also available there. ==="
+	@echo "=== Go to the docs directory to execute the example, the source code is also available there. ==="
+	@echo "=================================================================================================="
 
 $(EXP_EXEC): $(EXP_OBJS)
 	$(LD) -o $(EXP_EXEC) $(EXP_OBJS) $(LIB) $(LDFLAGS)

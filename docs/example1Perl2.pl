@@ -1,10 +1,10 @@
 
 sub showtime {
-  print "Tempo 2: ", time, "\n";
+  print "Time 2: ", time, "\n";
 }
 
-sub soma {
-  print "(Soma 2) $_[0] + $_[1]\n";
+sub sum {
+  print "(Sum 2) $_[0] + $_[1]\n";
   return $_[0] + $_[1];
 }
 

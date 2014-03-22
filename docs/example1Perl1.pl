@@ -4,7 +4,7 @@ sub showtime {
   print "Time: ", time, "\n";
 }
 
-sub soma {
+sub sum {
   return $_[0] + $_[1];
 }
 
