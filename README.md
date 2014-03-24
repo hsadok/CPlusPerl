@@ -43,6 +43,31 @@ Uhm.. If the sub() returns a PerlStack and also accepts one as parameter, we may
 	interface.sub("function1", interface.sub("function2"));
 
 
+Installation
+------------
+You will get C+Perl as easy as pie:
+* Linux
+If you have **Debian**, **Ubuntu**, **Mint** or other Debian based OS you may simply type in the terminal:
+	> sudo apt-get install build-essential libperl-dev
+	> wget --no-check-certificate https://github.com/hugombarreto/CPlusPerl/releases/download/v1.0/CPlusPerl-Ubuntu-Debian.tar.gz -O - | tar xz
+After that you will have the CPlusPerl.a and the CPLusPerl.h
+
+If you have **Fedora** or **RHEL** type:
+	> sudo yum install make gcc-c++ perl-devel.x86_64 perl-ExtUtils-Embed.noarch
+	> curl -L https://github.com/hugombarreto/CPlusPerl/releases/download/v1.0/CPlusPerl-Fedora-RHEL.tar.gz | tar zx
+
+After that you will have the CPlusPerl.a and the CPLusPerl.h
+
+If you have other Linux dist, check that you have the dependencies (make, g++, libperl-dev) and download the source code:
+	> curl -LO https://github.com/hugombarreto/CPlusPerl/archive/master.zip && unzip master && cd master && make
+
+
+* Mac OS X
+Make sure you have Xcode and have command line tools enabled (in the Xcode menu go to Preferences > Downloads, in the box install the Command Line Tools)
+	> curl -LO https://github.com/hugombarreto/CPlusPerl/releases/download/v1.0/CPlusPerl-MacOS10.9.zip && unzip CPlusPerl-MacOS10.9.zip
+After that you will have the CPlusPerl.a and the CPLusPerl.h
+
+* Windows (not supported yet)
 
 	
 
