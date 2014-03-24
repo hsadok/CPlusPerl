@@ -38,7 +38,7 @@ In fact the PerlInterface is also a PerlStack, that is why you can pass the para
 	awesomeStack << 2 << 3;
 	int result = interface.sub("sum", awesomeStack).get();
 
-Uhm.. If the sub() returns a PerlStack and also accepts one as parameter, we may pass the output of one function to an other:
+Uhm.. If the sub() returns a PerlStack and also accepts one as parameter, we may pass the output of one function to another:
 
 	interface.sub("function1", interface.sub("function2"));
 
