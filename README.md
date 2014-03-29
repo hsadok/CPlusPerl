@@ -60,7 +60,7 @@ If you have **Fedora** or **RHEL** type:
 	> sudo yum install make gcc-c++ perl-devel.x86_64 perl-ExtUtils-Embed.noarch
 	> curl -L https://github.com/hugombarreto/CPlusPerl/releases/download/v1.0/CPlusPerl-Fedora-RHEL.tar.gz | tar zx
 
-After that you will have the CPlusPerl.a and the CPLusPerl.h
+After that you will have the CPlusPerl.a and the CPlusPerl.h
 
 If you have other Linux dist, check that you have the dependencies (make, g++, libperl-dev) and download the source code:
 
