@@ -69,7 +69,7 @@ If you have other Linux dist, check that you have the dependencies (make, g++, l
 _______________________________________________________________________________________________________________________
 **Mac OS X**
 
-Make sure you have Xcode and have command line tools enabled (in the Xcode menu go to Preferences > Downloads, in the box install the Command Line Tools)
+Make sure you have Xcode and have command line tools enabled (in theterminal type: xcode-select --install)
 
 	> curl -LO https://github.com/hugombarreto/CPlusPerl/releases/download/v1.0/CPlusPerl-MacOS10.9.zip && unzip CPlusPerl-MacOS10.9.zip
 After that you will have the CPlusPerl.a and the CPLusPerl.h
