@@ -49,21 +49,21 @@ You will get C+Perl as easy as pie:
 
 **Linux**
 
-If you have **Debian**, **Ubuntu**, **Mint** or other Debian based OS you may simply type in the terminal::
+If you have **Debian**, **Ubuntu**, **Mint** or other Debian based OS you may simply type in the terminal:
 
 	$ sudo apt-get install build-essential libperl-dev
 	$ wget --no-check-certificate https://github.com/hugombarreto/CPlusPerl/releases/download/v1.0/CPlusPerl-Ubuntu-Debian.tar.gz -O - | tar xz
 
 After that you will have the ``CPlusPerl.a`` and the ``CPLusPerl.h``
 
-If you have **Fedora** or **RHEL** type::
+If you have **Fedora** or **RHEL** type:
 
 	$ sudo yum install make gcc-c++ perl-devel.x86_64 perl-ExtUtils-Embed.noarch
 	$ curl -L https://github.com/hugombarreto/CPlusPerl/releases/download/v1.0/CPlusPerl-Fedora-RHEL.tar.gz | tar zx
 
 After that you will have the ``CPlusPerl.a`` and the ``CPlusPerl.h``
 
-If you have other Linux dist, check that you have the dependencies (make, g++, libperl-dev) and download the source code::
+If you have other Linux dist, check that you have the dependencies (make, g++, libperl-dev) and download the source code:
 
 	$ curl -LO https://github.com/hugombarreto/CPlusPerl/archive/master.zip && unzip master && cd master && make
 
@@ -72,7 +72,7 @@ ________________________________________________________________________________
 
 Make sure you have Xcode and command line tools are enabled (in the terminal type: xcode-select --install)
 
-	> curl -LO https://github.com/hugombarreto/CPlusPerl/releases/download/v1.0/CPlusPerl-MacOS10.9.zip && unzip CPlusPerl-MacOS10.9.zip
+	$ curl -LO https://github.com/hugombarreto/CPlusPerl/releases/download/v1.0/CPlusPerl-MacOS10.9.zip && unzip CPlusPerl-MacOS10.9.zip
 After that you will have the ``CPlusPerl.a`` and the ``CPlusPerl.h``
 
 _______________________________________________________________________________________________________________________
@@ -83,15 +83,15 @@ Using the Library
 -----------------
 Once you have the ``CPlusPerl.a`` and the ``CPlusPerl.h`` you may be wondering how to compile your source code. There is a kind of "Makefile template" you can use to make your life easier.
 
-Copy and edit the `Makefile template <docs/example_Makefile.make>`_. Of course you can adapt the Makefile to your needs but there are two lines you very likely need to change. They are marked with a comment in the beginning that reads::
+Copy and edit the [Makefile template](docs/example_Makefile.make). Of course you can adapt the Makefile to your needs but there are two lines you very likely need to change. They are marked with a comment in the beginning that reads:
 
 	##### EDIT THE FOLLOWING LINES #####
 
 Make sure it contains a list of your C++ source files (you shouldn't list your Perl files as they are not to be compiled!).
 Now make sure you place this file with your source code and rename it to `Makefile`.
 
-To compile your code just execute the following command in the same directory as your Makefile::
+To compile your code just execute the following command in the same directory as your Makefile:
 
 	make
 
-If your code is right it should work, and a file with the executable name you specified should appear in the same directory. If you're lost with this Makefile thing you may consider reading a bit about it `here <https://www.gnu.org/software/make/manual/html_node/Introduction.html>`_.
+If your code is right it should work, and a file with the executable name you specified should appear in the same directory. If you're lost with this Makefile thing you may consider reading a bit about it [here](https://www.gnu.org/software/make/manual/html_node/Introduction.html>).
