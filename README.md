@@ -81,7 +81,7 @@ ________________________________________________________________________________
 
 Using the Library
 -----------------
-Once you have the ``CPlusPerl.a` and the ``CPlusPerl.h`` you may be wondering how to compile your source code. There is a kind of "Makefile template" you can use to make your life easier.
+Once you have the ``CPlusPerl.a`` and the ``CPlusPerl.h`` you may be wondering how to compile your source code. There is a kind of "Makefile template" you can use to make your life easier.
 
 Copy and edit the `Makefile template <docs/example_Makefile.make>`_. Of course you can adapt the Makefile to your needs but there are two lines you very likely need to change. They are marked with a comment in the beginning that reads::
 
