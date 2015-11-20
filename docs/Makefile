@@ -41,7 +41,7 @@ EXP_EXEC= example
 
 all: $(LIB) $(HEADER) $(EXP_EXEC)
 	@echo "=================================================================================================="
-	@echo "=== Go to the docs directory to execute the example, the source code is also available there. ==="
+	@echo "=== Go to the "docs" directory to execute the example, the source code is also available there ==="
 	@echo "=================================================================================================="
 
 $(EXP_EXEC): $(EXP_OBJS)

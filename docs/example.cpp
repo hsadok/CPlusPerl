@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 	int results[] = {ret.get(), ret.get(), ret.get()};
 	cout << "Results: " << results[0] << ", " << results[1] << ", " << results[2] << endl << endl;
 
-	cout << "Function 4 (Passing the return of a function to an other)" << endl;
+	cout << "Function 4 (Passing the return of a function to another)" << endl;
 	interface << 2 << 4 << 9;
 	PerlStack stackToAdd = interface.newStack();
 	stackToAdd << 1 << 2 << "C+Perl is awesome!" << 3.14159;
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
 
 
-	cout << endl << endl << "Now using an other file" << endl;
+	cout << endl << endl << "Now using another file" << endl;
 
 	PerlInterface interface2("example1Perl2.pl");//Look that we need a different PerlInterface when using a different file
 
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 	int results2[] = {ret2.get(), ret2.get(), ret2.get()};
 	cout << "Results: " << results2[0] << ", " << results2[1] << ", " << results2[2] << endl << endl;
 
-	cout << "Function 4 (Passing the return of a function to an other)" << endl;
+	cout << "Function 4 (Passing the return of a function to another)" << endl;
 	interface2 << 2 << 4 << 9;
 	interface2.sub("distArg", interface2.sub("squareAll"));
 

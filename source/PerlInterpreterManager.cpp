@@ -93,7 +93,7 @@ PerlInterpreterManager::~PerlInterpreterManager(){
 					(*i)->valid = false;
 				}
 				if (isValid()){
-					/*Killing the Perl Interpreter*/
+					/* Killing the Perl Interpreter */
 					setContext();
 					perl_destruct(my_perl);
 					perl_free(my_perl);
